@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Item() {
+function CategoryPage() {
 	return <div>Hello from Item page</div>;
 }
 
-export default Item;
+export default CategoryPage;
