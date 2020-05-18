@@ -7,6 +7,7 @@ function CategoryPage() {
 	return (
 		<div>
 			<Header />
+			<h2>Category Name Goes Here</h2>
 			<div class='row'>
 				<div class='col-sm-6'>
 					<div class='card'>
