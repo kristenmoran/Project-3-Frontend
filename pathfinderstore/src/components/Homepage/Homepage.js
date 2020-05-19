@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import Card from 'react-bootstrap/Card';
 
-function MyVerticallyCenteredModal(props) {
+function MyModal(props) {
 	return (
 		<Modal
 			{...props}
@@ -24,6 +27,24 @@ function MyVerticallyCenteredModal(props) {
 	);
 }
 
+// const responsive = {
+// 	desktop: {
+// 		breakpoint: { max: 3000, min: 1024 },
+// 		items: 3,
+// 		slidesToSlide: 3, // optional, default to 1.
+// 	},
+// 	tablet: {
+// 		breakpoint: { max: 1024, min: 464 },
+// 		items: 2,
+// 		slidesToSlide: 2, // optional, default to 1.
+// 	},
+// 	mobile: {
+// 		breakpoint: { max: 464, min: 0 },
+// 		items: 1,
+// 		slidesToSlide: 1, // optional, default to 1.
+// 	},
+// };
+
 function Homepage() {
 	const [modalShow, setModalShow] = React.useState(false);
 
@@ -33,11 +54,82 @@ function Homepage() {
 			<Button variant='primary' onClick={() => setModalShow(true)}>
 				About!
 			</Button>
-
-			<MyVerticallyCenteredModal
-				show={modalShow}
-				onHide={() => setModalShow(false)}
-			/>
+			<MyModal show={modalShow} onHide={() => setModalShow(false)} />
+			<Carousel
+				additionalTransfrom={0}
+				arrows
+				autoPlaySpeed={3000}
+				centerMode={true}
+				className=''
+				containerClass='container'
+				dotListClass=''
+				draggable
+				focusOnSelect={false}
+				infinite={false}
+				itemClass=''
+				keyBoardControl
+				minimumTouchDrag={80}
+				renderButtonGroupOutside={false}
+				renderDotsOutside={false}
+				responsive={{
+					desktop: {
+						breakpoint: {
+							max: 3000,
+							min: 1024,
+						},
+						items: 3,
+						partialVisibilityGutter: 40,
+					},
+					mobile: {
+						breakpoint: {
+							max: 464,
+							min: 0,
+						},
+						items: 1,
+						partialVisibilityGutter: 30,
+					},
+					tablet: {
+						breakpoint: {
+							max: 1024,
+							min: 464,
+						},
+						items: 2,
+						partialVisibilityGutter: 30,
+					},
+				}}
+				showDots={false}
+				sliderClass=''
+				slidesToSlide={1}
+				swipeable>
+				<Card style={{ width: '18rem' }}>
+					<Card.Title>Card Title</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+				<Card style={{ width: '18rem' }}>
+					<Card.Title>Card Title</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+				<Card style={{ width: '18rem' }}>
+					<Card.Title>Card Title</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+				<Card style={{ width: '18rem' }}>
+					<Card.Title>Card Title</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+			</Carousel>
 		</div>
 	);
 }
