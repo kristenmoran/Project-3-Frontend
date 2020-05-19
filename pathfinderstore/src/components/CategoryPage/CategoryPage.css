@@ -1,1 +1,18 @@
 /* code will go here */
+.categoryPage {
+	background-color: #f8f4e3;
+}
+
+.categoryTitle {
+	text-align: center;
+	font-family: 'MedievalSharp', cursive;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.categoryCard {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	font-family: 'Lato', sans-serif;
+}

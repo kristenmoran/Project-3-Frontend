@@ -1,0 +1,17 @@
+.itemPage {
+	background-color: #f8f4e3;
+}
+
+.itemDescription {
+	padding-top: 40px;
+}
+
+.itemTitle,
+.listTitle {
+	font-family: 'MedievalSharp', cursive;
+}
+
+.itemParagraph,
+.itemList {
+	font-family: 'Lato', sans-serif;
+}
