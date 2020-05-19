@@ -102,6 +102,20 @@ function Homepage() {
 				slidesToSlide={1}
 				swipeable>
 				<Card style={{ width: '18rem' }}>
+					<Card.Title>Weapon</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+				<Card style={{ width: '18rem' }}>
+					<Card.Title>Armor</Card.Title>
+					<Card.Text>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</Card.Text>
+				</Card>
+				<Card style={{ width: '18rem' }}>
 					<Card.Title>Card Title</Card.Title>
 					<Card.Text>
 						Some quick example text to build on the card title and make up the
