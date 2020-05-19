@@ -1,14 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/Header';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 function Item() {
 	return (
 		<div>
 			<Header />
-			<div class='row'>
-				<div class='col-md-8'></div>
-				<div class='col-md-4'>
+			<Row className='row justify-content-center'>
+				<Col className='col-md-6 justify-content-center'>
 					<h3 class='my-3'>Item Description</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
@@ -23,10 +23,9 @@ function Item() {
 						<li>Consectetur</li>
 						<li>Adipiscing Elit</li>
 					</ul>
-				</div>
-			</div>
+				</Col>
+			</Row>
 		</div>
 	);
 }
-
 export default Item;
