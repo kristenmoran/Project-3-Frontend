@@ -9,7 +9,7 @@ import './CategoryPage.css';
 
 function CategoryPage() {
 	return (
-		<div className='categoryPage'>
+		<div className='categoryPageContainer'>
 			<Header />
 			<h2 className='categoryTitle'>Category Name Goes Here</h2>
 			<Container className='container-fluid d-flex justify-content-center'>

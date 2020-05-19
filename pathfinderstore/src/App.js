@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CategoryPage from './components/CategoryPage/CategoryPage';
 import ItemPage from './components/ItemPage/Item';
+
 function App() {
 	return (
 		<div className='App'>

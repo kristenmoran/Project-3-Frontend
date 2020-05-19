@@ -1,6 +1,11 @@
 /* code will go here */
-.categoryPage {
+.categoryPageContainer {
 	background-color: #f8f4e3;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	overflow-y: auto;
 }
 
 .categoryTitle {
