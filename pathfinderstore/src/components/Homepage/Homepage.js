@@ -109,44 +109,51 @@ function Homepage() {
 					swipeable>
 					<Card>
 						<Link to='/adventuring' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Img variant='top' src='../../images/tent.png' />
 							<Card.Title>Adventuring Gear</Card.Title>
 						</Link>
 					</Card>
 					<Card>
-						<Card.Title>Armor</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+						<Link to='/food_drink' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/turkeyleg.png' />
+							<Card.Title>Food and Drink</Card.Title>
+						</Link>
 					</Card>
 					<Card>
-						<Card.Title>Card Title</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+						<Link to='/armor_shield' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/breastplatearmor.jpg' />
+							<Card.Title>Armor and Shield</Card.Title>
+						</Link>
 					</Card>
 					<Card>
-						<Card.Title>Card Title</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+						<Link to='/weapons' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Title>Weapons</Card.Title>
+						</Link>
 					</Card>
 					<Card>
-						<Card.Title>Card Title</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+						<Link to='/alchemical' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/potion.png' />
+							<Card.Title>Alchemical Items</Card.Title>
+						</Link>
 					</Card>
 					<Card>
-						<Card.Title>Card Title</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+						<Link to='/clothing' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Title>Clothing</Card.Title>
+						</Link>
+					</Card>
+					<Card>
+						<Link to='/containers' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/pouch.png' />
+							<Card.Title>Containers</Card.Title>
+						</Link>
+					</Card>
+					<Card>
+						<Link to='/writing' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/book.png' />
+							<Card.Title>Books, Paper and Writing Supplies</Card.Title>
+						</Link>
 					</Card>
 				</Carousel>
 			</div>
