@@ -6,6 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Card from 'react-bootstrap/Card';
 import './Homepage.css';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
 
 function MyModal(props) {
 	return (
@@ -106,42 +107,41 @@ function Homepage() {
 					sliderClass=''
 					slidesToSlide={1}
 					swipeable>
-					<Card style={{ width: '18rem' }}>
-						<Card.Title>Weapon</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</Card.Text>
+					<Card>
+						<Link to='/adventuring' className='item btn stretched-link'>
+							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Title>Adventuring Gear</Card.Title>
+						</Link>
 					</Card>
-					<Card style={{ width: '18rem' }}>
+					<Card>
 						<Card.Title>Armor</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</Card.Text>
 					</Card>
-					<Card style={{ width: '18rem' }}>
+					<Card>
 						<Card.Title>Card Title</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</Card.Text>
 					</Card>
-					<Card style={{ width: '18rem' }}>
+					<Card>
 						<Card.Title>Card Title</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</Card.Text>
 					</Card>
-					<Card style={{ width: '18rem' }}>
+					<Card>
 						<Card.Title>Card Title</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</Card.Text>
 					</Card>
-					<Card style={{ width: '18rem' }}>
+					<Card>
 						<Card.Title>Card Title</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the
