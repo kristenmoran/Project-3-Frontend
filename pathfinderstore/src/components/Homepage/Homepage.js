@@ -7,6 +7,14 @@ import Card from 'react-bootstrap/Card';
 import './Homepage.css';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import Book from '../../images/book.png';
+import Tent from '../../images/tent.png';
+import Sword from '../../images/pixartsword.png';
+import Armor from '../../images/breastplatearmor.jpg';
+import Potion from '../../images/potion.png';
+import Clothing from '../../images/tunic.png';
+import Pouch from '../../images/pouch.png';
+import Food from '../../images/turkeyleg.png';
 
 function MyModal(props) {
 	return (
@@ -29,24 +37,6 @@ function MyModal(props) {
 		</Modal>
 	);
 }
-
-// const responsive = {
-// 	desktop: {
-// 		breakpoint: { max: 3000, min: 1024 },
-// 		items: 3,
-// 		slidesToSlide: 3, // optional, default to 1.
-// 	},
-// 	tablet: {
-// 		breakpoint: { max: 1024, min: 464 },
-// 		items: 2,
-// 		slidesToSlide: 2, // optional, default to 1.
-// 	},
-// 	mobile: {
-// 		breakpoint: { max: 464, min: 0 },
-// 		items: 1,
-// 		slidesToSlide: 1, // optional, default to 1.
-// 	},
-// };
 
 function Homepage() {
 	const [modalShow, setModalShow] = React.useState(false);
@@ -109,49 +99,49 @@ function Homepage() {
 					swipeable>
 					<Card>
 						<Link to='/adventuring' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/tent.png' />
+							<Card.Img variant='top' src={Tent} />
 							<Card.Title>Adventuring Gear</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/food_drink' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/turkeyleg.png' />
+							<Card.Img variant='top' src={Food} />
 							<Card.Title>Food and Drink</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/armor_shield' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/breastplatearmor.jpg' />
+							<Card.Img variant='top' src={Armor} />
 							<Card.Title>Armor and Shield</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/weapons' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Img variant='top' src={Sword} />
 							<Card.Title>Weapons</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/alchemical' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/potion.png' />
+							<Card.Img variant='top' src={Potion} />
 							<Card.Title>Alchemical Items</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/clothing' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/pixartsword.png' />
+							<Card.Img variant='top' src={Clothing} />
 							<Card.Title>Clothing</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/containers' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/pouch.png' />
+							<Card.Img variant='top' src={Pouch} />
 							<Card.Title>Containers</Card.Title>
 						</Link>
 					</Card>
 					<Card>
 						<Link to='/writing' className='item btn stretched-link'>
-							<Card.Img variant='top' src='../../images/book.png' />
+							<Card.Img variant='top' src={Book} />
 							<Card.Title>Books, Paper and Writing Supplies</Card.Title>
 						</Link>
 					</Card>
