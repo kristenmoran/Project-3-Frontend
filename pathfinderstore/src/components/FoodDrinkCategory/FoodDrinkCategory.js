@@ -7,8 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import './FoodDrinkCategory.css';
 
-function AdventuringCategory() {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+function FoodDrinkCategory() {
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/food_drink`;
 	const [categories, setItems] = useState([]);
 
 	useEffect(() => {
@@ -59,4 +59,4 @@ function AdventuringCategory() {
 	);
 }
 
-export default AdventuringCategory;
+export default FoodDrinkCategory;

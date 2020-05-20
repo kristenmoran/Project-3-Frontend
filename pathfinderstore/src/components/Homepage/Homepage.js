@@ -15,7 +15,6 @@ import Potion from '../../images/potion.png';
 import Clothing from '../../images/tunic.png';
 import Pouch from '../../images/pouch.png';
 import Food from '../../images/turkeyleg.png';
-import CRUD from '../CRUD/CRUD';
 
 function MyModal(props) {
 	return (

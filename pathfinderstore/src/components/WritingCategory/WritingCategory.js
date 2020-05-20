@@ -15,10 +15,11 @@ function WritingCategory() {
 		fetch(url)
 			.then((response) => response.json())
 			.then((response) => {
+				console.log(response);
 				setItems(response);
 			})
 			.catch(console.error);
-	}, [url]);
+	}, []);
 
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;
