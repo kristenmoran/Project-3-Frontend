@@ -10,6 +10,14 @@
 	color: black;
 }
 
+.edit-button {
+	background-color: #a2a392;
+	border-color: #a2a392;
+	color: black;
+	padding: 10px;
+	border-radius: 5px;
+}
+
 .homepage {
 	background-image: url('../../images/WoodImg.jpeg');
 	height: 90vh;

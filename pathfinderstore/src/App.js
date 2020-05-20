@@ -14,6 +14,7 @@ import Homepage from './components/Homepage/Homepage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import CRUD from './components/CRUD/CRUD';
 
 function App() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
@@ -37,6 +38,7 @@ function App() {
 			<Header />
 			<Switch>
 				<Route path={`/`} exact={true} component={Homepage} />
+				<Route path={`/edit`} exact={true} component={CRUD} />
 				<Route
 					path={`/adventuring`}
 					exact={true}
