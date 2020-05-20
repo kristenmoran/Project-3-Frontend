@@ -37,7 +37,7 @@ function ClothingCategory() {
 							<Col
 								sm={true}
 								key={category._id}
-								className='col-lg-4 col-sm-12 col-md-6'>
+								className='text-center col-lg-4 col-sm-12 col-md-6'>
 								<Card
 									style={{ width: '18rem' }}
 									key={category._id}

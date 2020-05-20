@@ -9,14 +9,6 @@ import ClothingCategory from './components/ClothingCategory/ClothingCategory';
 import ContainersCategory from './components/ContainersCategory/ContainersCategory';
 import WeaponsCategory from './components/WeaponsCategory/WeaponsCategory';
 import WritingCategory from './components/WritingCategory/WritingCategory';
-// import AdventuringItemPage from './components/ItemPages/AdventuringItemPage';
-// import AlchemicalItemPage from './components/ItemPages/AlchemicalItemPage';
-// import ArmorShieldItemPage from './components/ItemPages/ArmorShieldItemPage';
-// import ClothingItemPage from './components/ItemPages/ArmorShieldItemPage';
-// import FoodDrinkItemPage from './components/ItemPages/FoodDrinkItemPage';
-// import WeaponsItemPage from './components/ItemPages/WeaponsItemPage';
-// import WritingItemPage from './components/ItemPages/WritingItemPage';
-// import ContainersItemPage from './components/ItemPages/ContainersItemPage';
 import ItemPage from './components/ItemPages/ItemPage';
 
 function App() {
@@ -67,63 +59,6 @@ function App() {
 					component={ContainersCategory}
 				/>
 				<Route path={`/writing`} exact={true} component={WritingCategory} />
-
-				{/* <Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<AlchemicalItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<FoodDrinkItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<ArmorShieldItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<WeaponsItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<ClothingItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<ContainersItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<WritingItemPage match={props.match} categories={categories} />
-					)}
-				/>
-				<Route
-					path={`/:id`}
-					exact={true}
-					render={(props) => (
-						<AdventuringItemPage match={props.match} categories={categories} />
-					)}
-				/> */}
 				<Route
 					path={'/:id'}
 					exact={true}

@@ -8,19 +8,18 @@ import './ItemPage.css';
 
 function ItemPage({ match }) {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
-	const [item, setCurrentItem] = useState({});
+	const [item, setItem] = useState({});
 
 	useEffect(() => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((response) => {
-				let currentItem = response.find(({ id }) => id === match.params._id);
-				setCurrentItem(currentItem);
+				let currentItem = response.find(( item ) => item._id === match.params.id);
+				console.log(response);
+				setItem(currentItem);
 			})
 			.catch(console.error);
-	}, [match.params._id, url]);
-
-	console.log(item);
+	}, []);
 
 	if (!item) return null;
 
