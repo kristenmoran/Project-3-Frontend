@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import './ItemPage.css';
 
 function FoodDrinkItemPage({ match }) {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/food_drink`;
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [item, setCurrentItem] = useState({});
 
 	useEffect(() => {

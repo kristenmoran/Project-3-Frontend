@@ -45,7 +45,7 @@ function ClothingCategory() {
 									<div className='card-body'>
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
-											to={`/clothing/${category._id}`}
+											to={`/${category._id}`}
 											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>

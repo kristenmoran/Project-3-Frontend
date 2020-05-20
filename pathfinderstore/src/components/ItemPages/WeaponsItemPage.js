@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import './ItemPage.css';
 
 function WeaponsItemPage({ match }) {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/weapons`;
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [item, setCurrentItem] = useState({});
 
 	useEffect(() => {

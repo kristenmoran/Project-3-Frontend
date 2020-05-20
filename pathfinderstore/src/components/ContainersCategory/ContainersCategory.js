@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import './ContainersCategory.css';
 
 function ContainerCategory() {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/adventuring`;
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/continers`;
 	const [categories, setItems] = useState([]);
 
 	useEffect(() => {
@@ -45,7 +45,7 @@ function ContainerCategory() {
 									<div className='card-body'>
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
-											to={`/containers/${category._id}`}
+											to={`/${category._id}`}
 											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>
