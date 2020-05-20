@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdventuringCategory from './components/AdventuringCategory/AdventuringCategory';
@@ -8,27 +8,10 @@ import ArmorShieldCategory from './components/ArmorShieldCategory/ArmorShieldCat
 import ClothingCategory from './components/ClothingCategory/ClothingCategory';
 import ContainersCategory from './components/ContainersCategory/ContainersCategory';
 import WeaponsCategory from './components/WeaponsCategory/WeaponsCategory';
-import WritingCategory from './components/WeaponsCategory/WeaponsCategory';
+import WritingCategory from './components/WritingCategory/WritingCategory';
 import ItemPage from './components/ItemPage/Item';
 
 function App() {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/';
-	const [categories, setItems] = useState([]);
-
-	useEffect(() => {
-		fetch(url)
-			.then((response) => response.json())
-			.then((response) => {
-				setItems(response);
-			})
-			.catch(console.error);
-	}, []);
-
-	if (categories.length === 0) {
-		return <div className='searching'>Gathering Items</div>;
-	}
-	console.log(categories);
-
 	return (
 		<div className='App'>
 			<Switch>
