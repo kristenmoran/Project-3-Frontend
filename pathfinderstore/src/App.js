@@ -10,6 +10,10 @@ import ContainersCategory from './components/ContainersCategory/ContainersCatego
 import WeaponsCategory from './components/WeaponsCategory/WeaponsCategory';
 import WritingCategory from './components/WritingCategory/WritingCategory';
 import ItemPage from './components/ItemPages/ItemPage';
+import Homepage from './components/Homepage/Homepage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
 function App() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
@@ -30,7 +34,9 @@ function App() {
 
 	return (
 		<div className='App'>
+			<Header />
 			<Switch>
+				<Route path={`/`} exact={true} component={Homepage} />
 				<Route
 					path={`/adventuring`}
 					exact={true}
@@ -67,6 +73,7 @@ function App() {
 					)}
 				/>
 			</Switch>
+			<Footer />
 		</div>
 	);
 }
