@@ -15,7 +15,6 @@ function ItemPage({ match }) {
 			.then((response) => response.json())
 			.then((response) => {
 				let currentItem = response.find(( item ) => item._id === match.params.id);
-				console.log(response);
 				setItem(currentItem);
 			})
 			.catch(console.error);
