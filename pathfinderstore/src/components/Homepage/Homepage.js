@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from 'react-bootstrap/Card';
+import './Homepage.css';
 
 function MyModal(props) {
 	return (
@@ -50,8 +51,10 @@ function Homepage() {
 
 	return (
 		<div>
-			<h1>Hi from the Homepage!</h1>
-			<Button variant='primary' onClick={() => setModalShow(true)}>
+			<Button
+				className='modal-button'
+				variant='primary'
+				onClick={() => setModalShow(true)}>
 				About!
 			</Button>
 			<MyModal show={modalShow} onHide={() => setModalShow(false)} />
