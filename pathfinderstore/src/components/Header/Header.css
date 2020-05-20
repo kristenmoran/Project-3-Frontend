@@ -1,1 +1,19 @@
 /* code will go here */
+header {
+	background-color: #f8f4e3;
+	color: black;
+	height: 80px;
+}
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 18px;
+}
+#dropdown-basic-button {
+	background-color: #a2a392;
+	border-color: #a2a392;
+	color: black;
+}
+header a {
+	color: black;
+}
