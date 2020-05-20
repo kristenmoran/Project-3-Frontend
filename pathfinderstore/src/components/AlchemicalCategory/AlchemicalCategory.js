@@ -5,10 +5,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import './AdventuringCategory.css';
+import './AlchemicalCategory.css';
 
-function AdventuringCategory() {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/adventuring`;
+function AlchemicalCategory() {
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/alchemical`;
 	const [categories, setItems] = useState([]);
 
 	useEffect(() => {
@@ -28,7 +28,7 @@ function AdventuringCategory() {
 	return (
 		<div className='categoryPageContainer'>
 			<Header />
-			<h2 className='categoryTitle'>Adventuring Items</h2>
+			<h2 className='categoryTitle'>Alchemical Items</h2>
 			<Container className='container-fluid d-flex justify-content-center'>
 				<Row>
 					{categories &&
@@ -58,4 +58,4 @@ function AdventuringCategory() {
 	);
 }
 
-export default AdventuringCategory;
+export default AlchemicalCategory;
