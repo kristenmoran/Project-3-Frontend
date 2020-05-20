@@ -36,16 +36,16 @@ function ArmorShieldCategory() {
 						categories.map((category) => (
 							<Col
 								sm={true}
-								key={category.id}
-								className='col-lg-4 col-sm-12 col-md-6'>
+								key={category._id}
+								className='text-center col-lg-4 col-sm-12 col-md-6'>
 								<Card
 									style={{ width: '18rem' }}
-									key={category.id}
+									key={category._id}
 									className='categoryCard'>
 									<div className='card-body'>
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
-											to={`/armor_shield/${category.id}`}
+											to={`/armor_shield/${category._id}`}
 											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>

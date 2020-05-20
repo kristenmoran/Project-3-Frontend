@@ -18,7 +18,7 @@ function AdventuringCategory() {
 				setItems(response);
 			})
 			.catch(console.error);
-	}, []);
+	}, [url]);
 
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;

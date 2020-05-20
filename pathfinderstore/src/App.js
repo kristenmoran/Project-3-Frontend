@@ -9,7 +9,14 @@ import ClothingCategory from './components/ClothingCategory/ClothingCategory';
 import ContainersCategory from './components/ContainersCategory/ContainersCategory';
 import WeaponsCategory from './components/WeaponsCategory/WeaponsCategory';
 import WritingCategory from './components/WritingCategory/WritingCategory';
-import ItemPage from './components/ItemPage/ItemPage';
+import AdventuringItemPage from './components/ItemPages/AdventuringItemPage';
+import AlchemicalItemPage from './components/ItemPages/AlchemicalItemPage';
+import ArmorShieldItemPage from './components/ItemPages/ArmorShieldItemPage';
+import ClothingItemPage from './components/ItemPages/ArmorShieldItemPage';
+import FoodDrinkItemPage from './components/ItemPages/FoodDrinkItemPage';
+import WeaponsItemPage from './components/ItemPages/WeaponsItemPage';
+import WritingItemPage from './components/ItemPages/WritingItemPage';
+import ContainersItemPage from './components/ItemPages/ContainersItemPage';
 
 function App() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
@@ -64,56 +71,56 @@ function App() {
 					path={`/alchemical/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<AlchemicalItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/food_drink/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<FoodDrinkItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/armor_shield/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<ArmorShieldItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/weapons/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<WeaponsItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/clothing/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<ClothingItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/containers/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<ContainersItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/writing/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<WritingItemPage match={props.match} categories={categories} />
 					)}
 				/>
 				<Route
 					path={`/adventuring/:id`}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<AdventuringItemPage match={props.match} categories={categories} />
 					)}
 				/>
 			</Switch>

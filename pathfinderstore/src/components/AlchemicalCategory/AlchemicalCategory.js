@@ -23,7 +23,6 @@ function AlchemicalCategory() {
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;
 	}
-	console.log(categories);
 
 	return (
 		<div className='categoryPageContainer'>
@@ -36,16 +35,16 @@ function AlchemicalCategory() {
 						categories.map((category) => (
 							<Col
 								sm={true}
-								key={category.id}
-								className='col-lg-4 col-sm-12 col-md-6'>
+								key={category._id}
+								className='text-center col-lg-4 col-sm-12 col-md-6'>
 								<Card
 									style={{ width: '18rem' }}
-									key={category.id}
+									key={category._id}
 									className='categoryCard'>
 									<div className='card-body'>
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
-											to={`/alchemical/${category.id}`}
+											to={`/alchemical/${category._id}`}
 											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>

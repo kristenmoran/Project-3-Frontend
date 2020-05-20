@@ -6,8 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './ItemPage.css';
 
-function ItemPage({ match }) {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+function WeaponsItemPage({ match }) {
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/weapons`;
 	const [item, setCurrentItem] = useState({});
 
 	useEffect(() => {
@@ -18,7 +18,9 @@ function ItemPage({ match }) {
 				setCurrentItem(currentItem);
 			})
 			.catch(console.error);
-	}, [match.params._id, match.params.id, url]);
+	}, [match.params._id, url]);
+
+	console.log(item);
 
 	if (!item) return null;
 
@@ -28,19 +30,12 @@ function ItemPage({ match }) {
 				<Header />
 				<Row className='row justify-content-center'>
 					<Col className='itemDescription col-md-6 justify-content-center'>
-						<h3 className='itemTitle'>Item Description</h3>
-						<p className='itemParagraph'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-							viverra euismod odio, gravida pellentesque urna varius vitae. Sed
-							dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris
-							ultricies, justo eu convallis placerat, felis enim.
-						</p>
+						<h3 className='itemTitle'>{item.name}</h3>
+						<p className='itemParagraph'>{item.description}</p>
 						<h3 className='listTitle'>Item Details</h3>
 						<ul className='itemList'>
-							<li>Lorem Ipsum</li>
-							<li>Dolor Sit Amet</li>
-							<li>Consectetur</li>
-							<li>Adipiscing Elit</li>
+							<li>Value: {item.value} gp</li>
+							<li>Weight: {item.weight} lb</li>
 						</ul>
 					</Col>
 				</Row>
@@ -48,4 +43,4 @@ function ItemPage({ match }) {
 		</div>
 	);
 }
-export default ItemPage;
+export default WeaponsItemPage;
