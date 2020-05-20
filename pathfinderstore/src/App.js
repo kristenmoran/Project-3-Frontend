@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdventuringCategory from './components/AdventuringCategory/AdventuringCategory';
@@ -9,9 +9,25 @@ import ClothingCategory from './components/ClothingCategory/ClothingCategory';
 import ContainersCategory from './components/ContainersCategory/ContainersCategory';
 import WeaponsCategory from './components/WeaponsCategory/WeaponsCategory';
 import WritingCategory from './components/WritingCategory/WritingCategory';
-import ItemPage from './components/ItemPage/Item';
+import ItemPage from './components/ItemPage/ItemPage';
 
 function App() {
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+	const [categories, setItems] = useState([]);
+
+	useEffect(() => {
+		fetch(url)
+			.then((response) => response.json())
+			.then((response) => {
+				setItems(response);
+			})
+			.catch(console.error);
+	}, [url]);
+
+	if (categories.length === 0) {
+		return <div className='searching'>Gathering Items</div>;
+	}
+
 	return (
 		<div className='App'>
 			<Switch>
@@ -43,7 +59,63 @@ function App() {
 					component={ContainersCategory}
 				/>
 				<Route path={`/writing`} exact={true} component={WritingCategory} />
-				<Route path={`/item`} exact={true} component={ItemPage} />
+
+				<Route
+					path={`/alchemical/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/food_drink/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/armor_shield/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/weapons/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/clothing/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/containers/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/writing/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
+				<Route
+					path={`/adventuring/:id`}
+					exact={true}
+					render={(props) => (
+						<ItemPage match={props.match} categories={categories} />
+					)}
+				/>
 			</Switch>
 		</div>
 	);
