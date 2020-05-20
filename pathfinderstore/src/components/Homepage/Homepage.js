@@ -97,49 +97,49 @@ function Homepage() {
 					sliderClass=''
 					slidesToSlide={1}
 					swipeable>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/adventuring' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Tent} />
 							<Card.Title>Adventuring Gear</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/food_drink' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Food} />
 							<Card.Title>Food and Drink</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/armor_shield' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Armor} />
 							<Card.Title>Armor and Shield</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/weapons' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Sword} />
 							<Card.Title>Weapons</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/alchemical' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Potion} />
 							<Card.Title>Alchemical Items</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/clothing' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Clothing} />
 							<Card.Title>Clothing</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/containers' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Pouch} />
 							<Card.Title>Containers</Card.Title>
 						</Link>
 					</Card>
-					<Card>
+					<Card className='carousel-cards'>
 						<Link to='/writing' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Book} />
 							<Card.Title>Books, Paper and Writing Supplies</Card.Title>
