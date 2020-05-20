@@ -1,1 +1,22 @@
 /* code will go here */
+.carousel {
+	margin: 80px;
+}
+
+.modal-button {
+	margin: 50px;
+	background-color: #a2a392;
+	border-color: #a2a392;
+	color: black;
+}
+
+.homepage {
+	background-image: url('../../images/WoodImg.jpeg');
+	height: 90vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.carousel-cards {
+	width: 18rem;
+}
