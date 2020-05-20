@@ -29,6 +29,7 @@ function AdventuringCategory() {
 		<div className='categoryPageContainer'>
 			<Header />
 			<h2 className='categoryTitle'>Adventuring Items</h2>
+			<h3 className='titleDescription'>Select an item Adventurer!</h3>
 			<Container className='container-fluid d-flex justify-content-center'>
 				<Row>
 					{categories &&
@@ -36,7 +37,7 @@ function AdventuringCategory() {
 							<Col
 								sm={true}
 								key={category.id}
-								className='col-lg-4 col-sm-12 col-md-6'>
+								className='text-center col-lg-4 col-sm-12 col-md-6'>
 								<Card
 									style={{ width: '18rem' }}
 									key={category.id}
@@ -45,7 +46,7 @@ function AdventuringCategory() {
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
 											to={`/item/${category.id}`}
-											className='item btn stretched-link'>
+											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>
 									</div>

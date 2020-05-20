@@ -29,6 +29,7 @@ function ClothingCategory() {
 		<div className='categoryPageContainer'>
 			<Header />
 			<h2 className='categoryTitle'>Clothing Items</h2>
+			<h3 className='titleDescription'>Select an item Adventurer!</h3>
 			<Container className='container-fluid d-flex justify-content-center'>
 				<Row>
 					{categories &&
@@ -45,7 +46,7 @@ function ClothingCategory() {
 										<h5 className='card-title'>{category.name}</h5>
 										<Link
 											to={`/item/${category.id}`}
-											className='item btn stretched-link'>
+											className='subcategory item btn stretched-link'>
 											{category.categoryTwo}
 										</Link>
 									</div>
