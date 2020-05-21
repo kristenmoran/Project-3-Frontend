@@ -1,6 +1,7 @@
 /* code will go here */
 .carousel {
 	margin: 80px;
+	padding-bottom: 20px;
 }
 
 .modal-button {
@@ -8,10 +9,22 @@
 	background-color: #a2a392;
 	border-color: #a2a392;
 	color: black;
+	font-size: 25px;
 }
 
-.card {
+.modal-button:hover,
+.add-button:hover {
+	background-color: #301014;
+	color: #a2a392;
+	border-color: #301014;
+	text-decoration: none;
+}
+
+.carousel-cards {
 	margin: 0 0.75rem;
+	background-color: #f8f4e3;
+	border: 5px solid #a2a392;
+	border-radius: 10px;
 }
 
 .card-title {
@@ -30,4 +43,30 @@
 	padding: 10px;
 	border-radius: 5px;
 	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.carousel-cards:hover {
+	box-shadow: 5px 10px 20px 1px black;
+}
+
+.modal {
+	font-family: 'MedievalSharp', cursive;
+	color: #301014;
+}
+
+.body-modal {
+	background-color: #f8f4e3;
+}
+
+.inside-modal-button {
+	background-color: #301014;
+	color: #a2a392;
+	border-color: #301014;
+}
+
+.inside-modal-button:hover {
+	color: #301014;
+	background-color: #a2a392;
+	border-color: #a2a392;
 }

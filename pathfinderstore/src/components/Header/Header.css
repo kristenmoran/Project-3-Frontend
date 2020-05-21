@@ -1,7 +1,7 @@
 /* code will go here */
 header {
-	background-color: #f8f4e3;
-	color: black;
+	background-color: #301014;
+	color: #a2a392;
 	height: 90px;
 }
 .header-container {
@@ -20,4 +20,17 @@ header a {
 
 .header-logo {
 	height: 50px;
+}
+
+.dropdown-menu {
+	background-color: #f8f4e3;
+}
+
+.dropdown-item {
+	font-size: 20px;
+}
+
+.dropdown-item:hover {
+	background-color: #301014;
+	color: #a2a392;
 }

@@ -19,15 +19,14 @@ function AddItem({ match, history }) {
 	function handleSubmit(e) {
 		e.preventDefault();
 		fetch(`${url}admin/new`, {
-            method: 'POST',
-            body: JSON.stringify(item),
+			method: 'POST',
+			body: JSON.stringify(item),
 			headers: {
-                'Content-Type': 'application/json',          
+				'Content-Type': 'application/json',
 			},
-        })
-            .then((response) => response.json())
+		})
+			.then((response) => response.json())
 			.then((response) => {
-				console.log(response);
 				history.push(`/${response._id}`);
 			})
 			.catch(console.error);
@@ -44,15 +43,18 @@ function AddItem({ match, history }) {
 						placeholder='ex. Bag of Holding'
 						name='name'
 						onChange={handleChange}
+						className='name-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlTextarea1'>
 					<Form.Label>Item Description</Form.Label>
 					<Form.Control
 						as='textarea'
+						type='text'
 						rows='3'
 						name='description'
 						onChange={handleChange}
+						className='desc-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlTextarea1'>
@@ -62,6 +64,7 @@ function AddItem({ match, history }) {
 						rows='3'
 						name='value'
 						onChange={handleChange}
+						className='value-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlTextarea1'>
@@ -71,6 +74,7 @@ function AddItem({ match, history }) {
 						rows='3'
 						name='weight'
 						onChange={handleChange}
+						className='weight-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
@@ -79,6 +83,7 @@ function AddItem({ match, history }) {
 						type='text'
 						name='categoryOne'
 						onChange={handleChange}
+						className='cat-input'
 					/>
 				</Form.Group>
 				<ul className='categoryList categoryListTitle'>

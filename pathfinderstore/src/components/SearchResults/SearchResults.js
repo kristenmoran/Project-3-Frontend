@@ -36,11 +36,14 @@ function SearchResults() {
 
 	if (categories.length === 0) {
 		return (
-			<SearchForm
-				handleChange={handleChange}
-				handleSubmit={handleSubmit}
-				searchString={searchString}
-			/>
+			<div className='categoryPageContainer'>
+				<Header />
+				<SearchForm
+					handleChange={handleChange}
+					handleSubmit={handleSubmit}
+					searchString={searchString}
+				/>
+			</div>
 		);
 	}
 
@@ -72,7 +75,7 @@ function SearchResults() {
 											<Link
 												to={`/${category._id}`}
 												className='subcategory item btn stretched-link'>
-												{category.categoryTwo}
+												{category.categoryOne}
 											</Link>
 										</div>
 									</Card>

@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 import './ItemPage.css';
 
 function ItemPage({ match, location, history }) {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/';
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items';
 	const [item, setItem] = useState({});
 
 	useEffect(() => {
-		fetch(`${url}/${match.params.id}`)
+		fetch(`${url}/id/${match.params.id}`)
 			.then((response) => response.json())
 			.then((response) => {
 				setItem(response);
@@ -34,8 +34,8 @@ function ItemPage({ match, location, history }) {
 
 	return (
 		<div className='itemPage'>
+			<Header />
 			<Container>
-				<Header />
 				<Row className='row justify-content-center'>
 					<Col className='itemDescription col-md-6 justify-content-center'>
 						<h3 className='itemTitle'>{item.name}</h3>
@@ -48,8 +48,14 @@ function ItemPage({ match, location, history }) {
 					</Col>
 				</Row>
 			</Container>
-			<Link to={`/edit/${match.params.id}`}>Edit</Link>
-			<button onClick={handleDelete}>Delete</button>
+			<div className='crud-buttons'>
+				<Link className='edit-button' to={`/edit/${match.params.id}`}>
+					Edit
+				</Link>
+				<button className='delete-button' onClick={handleDelete}>
+					Delete
+				</button>
+			</div>
 		</div>
 	);
 }

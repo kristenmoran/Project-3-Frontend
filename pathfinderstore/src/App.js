@@ -19,7 +19,6 @@ import EditItem from './components/EditItem/EditItem';
 import AddItem from './components/AddItem/AddItem'
 
 function App(props) {
-	console.log(props);
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [categories, setItems] = useState([]);
 

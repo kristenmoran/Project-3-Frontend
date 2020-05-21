@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import './EditItem.css';
+import Header from '../Header/Header';
 
 function EditItem({ match, history }) {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/';
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items';
 	const [item, setItem] = useState({
 		name: '',
 		categoryOne: '',
@@ -11,7 +12,7 @@ function EditItem({ match, history }) {
 	});
 
 	useEffect(() => {
-		fetch(`${url}/${match.params.id}`)
+		fetch(`${url}/id/${match.params.id}`)
 			.then((response) => response.json())
 			.then((response) => {
 				setItem(response);
@@ -40,7 +41,8 @@ function EditItem({ match, history }) {
 
 	return (
 		<div className='testing'>
-			<h1>Edit An Item</h1>
+			<Header />
+			<h1 className='edit-title'>Edit An Item</h1>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Label>Name</Form.Label>
@@ -50,6 +52,7 @@ function EditItem({ match, history }) {
 						name='name'
 						value={item.name}
 						onChange={handleChange}
+						className='name-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
@@ -60,6 +63,7 @@ function EditItem({ match, history }) {
 						name='categoryOne'
 						value={item.categoryOne}
 						onChange={handleChange}
+						className='cat-input'
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlTextarea1'>
@@ -70,6 +74,7 @@ function EditItem({ match, history }) {
 						name='description'
 						value={item.description}
 						onChange={handleChange}
+						className='desc-input'
 					/>
 				</Form.Group>
 				<button type='submit'>Edit Item</button>
