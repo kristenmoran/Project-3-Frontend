@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import './FoodDrinkCategory.css';
 
-function AdventuringCategory() {
+function FoodDrinkCategory() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/food_drink`;
 	const [categories, setItems] = useState([]);
 
@@ -23,7 +23,6 @@ function AdventuringCategory() {
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;
 	}
-	console.log(categories);
 
 	return (
 		<div className='categoryPageContainer'>
@@ -59,4 +58,4 @@ function AdventuringCategory() {
 	);
 }
 
-export default AdventuringCategory;
+export default FoodDrinkCategory;

@@ -4,21 +4,31 @@ import Header from '../Header/Header';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 import './ItemPage.css';
 
-function ItemPage({ match }) {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+function ItemPage({ match, location, history }) {
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/';
 	const [item, setItem] = useState({});
 
 	useEffect(() => {
-		fetch(url)
+		fetch(`${url}/${match.params.id}`)
 			.then((response) => response.json())
 			.then((response) => {
-				let currentItem = response.find(( item ) => item._id === match.params.id);
-				setItem(currentItem);
+				setItem(response);
 			})
 			.catch(console.error);
-	}, []);
+	}, [match.params.id]);
+
+	function handleDelete(e) {
+		fetch(`${url}/admin/${match.params.id}`, {
+			method: 'DELETE',
+		})
+			.then(() => {
+				history.push('/');
+			})
+			.catch(console.error);
+	}
 
 	if (!item) return null;
 
@@ -38,6 +48,8 @@ function ItemPage({ match }) {
 					</Col>
 				</Row>
 			</Container>
+			<Link to={`/edit/${match.params.id}`}>Edit</Link>
+			<button onClick={handleDelete}>Delete</button>
 		</div>
 	);
 }

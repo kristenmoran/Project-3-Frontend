@@ -23,7 +23,6 @@ function ClothingCategory() {
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;
 	}
-	console.log(categories);
 
 	return (
 		<div className='categoryPageContainer'>

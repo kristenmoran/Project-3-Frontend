@@ -51,6 +51,7 @@ function Homepage() {
 					onClick={() => setModalShow(true)}>
 					About this App
 				</Button>
+				<Link to={`/new`}>Add an Item</Link>
 				<MyModal show={modalShow} onHide={() => setModalShow(false)} />
 				<Carousel
 					additionalTransfrom={0}
