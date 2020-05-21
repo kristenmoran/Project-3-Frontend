@@ -35,7 +35,7 @@ function AddItem({ match, history }) {
 
 	return (
 		<div className='testing'>
-			<h1>Add An Item</h1>
+			<h1 className='addTitle'>Add An Item</h1>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Label>Name</Form.Label>

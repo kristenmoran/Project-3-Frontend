@@ -7,6 +7,10 @@
 	overflow-y: auto;
 }
 
+.addTitle {
+    padding-top: 20px;
+}
+
 .categoryList {
 	list-style-type: none;
 }
