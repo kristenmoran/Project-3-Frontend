@@ -4,7 +4,7 @@ import './EditItem.css';
 import Header from '../Header/Header';
 
 function EditItem({ match, history }) {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/id';
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items';
 	const [item, setItem] = useState({
 		name: '',
 		categoryOne: '',
@@ -12,7 +12,7 @@ function EditItem({ match, history }) {
 	});
 
 	useEffect(() => {
-		fetch(`${url}/${match.params.id}`)
+		fetch(`${url}/id/${match.params.id}`)
 			.then((response) => response.json())
 			.then((response) => {
 				setItem(response);

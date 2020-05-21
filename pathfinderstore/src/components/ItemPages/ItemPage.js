@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 import './ItemPage.css';
 
 function ItemPage({ match, location, history }) {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/id';
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items';
 	const [item, setItem] = useState({});
 
 	useEffect(() => {
-		fetch(`${url}/${match.params.id}`)
+		fetch(`${url}/id/${match.params.id}`)
 			.then((response) => response.json())
 			.then((response) => {
 				setItem(response);

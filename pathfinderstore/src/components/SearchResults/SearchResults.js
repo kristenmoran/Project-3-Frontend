@@ -75,7 +75,7 @@ function SearchResults() {
 											<Link
 												to={`/${category._id}`}
 												className='subcategory item btn stretched-link'>
-												{category.categoryTwo}
+												{category.categoryOne}
 											</Link>
 										</div>
 									</Card>

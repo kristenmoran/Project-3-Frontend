@@ -24,21 +24,23 @@ function MyModal(props) {
 			size='lg'
 			aria-labelledby='contained-modal-title-vcenter'
 			centered>
-			<Modal.Header closeButton>
-				<Modal.Title id='contained-modal-title-vcenter'>
-					About this Project
-				</Modal.Title>
-			</Modal.Header>
-			<Modal.Body>
-				<p>
-					This is a store for Pathfinder. Pathfinder is a fantasy tabletop role
-					playing game. Search our inventory to see information about items for
-					your characters
-				</p>
-			</Modal.Body>
-			<Modal.Footer>
-				<Button onClick={props.onHide}>Close</Button>
-			</Modal.Footer>
+			<div className='body-modal'>
+				<Modal.Header closeButton>
+					<Modal.Title id='contained-modal-title-vcenter'>
+						About this Project
+					</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					<p>
+						This is a store for Pathfinder. Pathfinder is a fantasy tabletop
+						role playing game. Search our inventory to see information about
+						items for your characters
+					</p>
+				</Modal.Body>
+				<Modal.Footer>
+					<Button className='inside-modal-button' onClick={props.onHide}>Close</Button>
+				</Modal.Footer>
+			</div>
 		</Modal>
 	);
 }
