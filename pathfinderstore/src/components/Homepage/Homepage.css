@@ -21,3 +21,13 @@
 	justify-content: center;
 	flex-direction: column;
 }
+
+.add-button {
+	margin: 50px;
+	background-color: #a2a392;
+	border-color: #a2a392;
+	color: black;
+	padding: 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
