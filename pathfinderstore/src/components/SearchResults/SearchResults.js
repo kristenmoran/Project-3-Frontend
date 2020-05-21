@@ -36,11 +36,14 @@ function SearchResults() {
 
 	if (categories.length === 0) {
 		return (
-			<SearchForm
-				handleChange={handleChange}
-				handleSubmit={handleSubmit}
-				searchString={searchString}
-			/>
+			<div className='categoryPageContainer'>
+				<Header />
+				<SearchForm
+					handleChange={handleChange}
+					handleSubmit={handleSubmit}
+					searchString={searchString}
+				/>
+			</div>
 		);
 	}
 

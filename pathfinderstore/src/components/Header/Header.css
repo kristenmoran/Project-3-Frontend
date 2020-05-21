@@ -21,3 +21,16 @@ header a {
 .header-logo {
 	height: 50px;
 }
+
+.dropdown-menu {
+	background-color: #f6f0ed;
+}
+
+.dropdown-item {
+	font-size: 20px;
+}
+
+.dropdown-item:hover {
+	background-color: #301014;
+	color: #a2a392;
+}

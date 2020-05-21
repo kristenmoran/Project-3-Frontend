@@ -34,8 +34,8 @@ function ItemPage({ match, location, history }) {
 
 	return (
 		<div className='itemPage'>
+			<Header />
 			<Container>
-				<Header />
 				<Row className='row justify-content-center'>
 					<Col className='itemDescription col-md-6 justify-content-center'>
 						<h3 className='itemTitle'>{item.name}</h3>
@@ -48,8 +48,14 @@ function ItemPage({ match, location, history }) {
 					</Col>
 				</Row>
 			</Container>
-			<Link to={`/edit/${match.params.id}`}>Edit</Link>
-			<button onClick={handleDelete}>Delete</button>
+			<div className='crud-buttons'>
+				<Link className='edit-button' to={`/edit/${match.params.id}`}>
+					Edit
+				</Link>
+				<button className='delete-button' onClick={handleDelete}>
+					Delete
+				</button>
+			</div>
 		</div>
 	);
 }
