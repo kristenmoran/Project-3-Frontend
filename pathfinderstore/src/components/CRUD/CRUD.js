@@ -1,7 +1,22 @@
-import React from 'react';
+
+import React, { useState , useEffect } from 'react';
 import './CRUD.css';
 
 function CRUD() {
+    const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+    const [ editItem , setEditItem] = useState([]);
+    useEffect(() => {
+			fetch(url)
+				.then((response) => response.json())
+				.then((response) => {
+					setItems(response);
+				})
+				.catch(console.error);
+        }, [url]);
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+        }
 	return (
 		<div className='testing'>
 			<h1>Edit An Item</h1>
@@ -9,16 +24,15 @@ function CRUD() {
 				<label className='title'>Name:</label>
 				<input type='text' id='name' name='name' />
 
-				<label className='url'>Recipe URL:</label>
+				<label className='url'>Description:</label>
 				<input type='text' id='url' name='url' />
 
-				<label className='ingredients'>Ingredients:</label>
+				<label className='ingredients'>Category:</label>
 				<input type='text' id='ingredients' name='ingredients' />
 
-				<label className='instructions'>Instructions:</label>
-				<input type='text' id='instructions' name='instructions' />
-
-				<button type='submit'>Add Recipe</button>
+				<button type='submit'>Add Item</button>
+				<button type='submit'>Update Item</button>
+				<button type='submit'>Delete Item</button>
 			</form>
 		</div>
 	);
