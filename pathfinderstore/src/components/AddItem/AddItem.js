@@ -42,7 +42,7 @@ function AddItem({ match, history }) {
 					<Form.Control
 						type='text'
 						placeholder='ex. Bag of Holding'
-                        name='name'
+						name='name'
 						onChange={handleChange}
 					/>
 				</Form.Group>
@@ -52,7 +52,6 @@ function AddItem({ match, history }) {
 						as='textarea'
 						rows='3'
 						name='description'
-
 						onChange={handleChange}
 					/>
 				</Form.Group>
@@ -62,7 +61,6 @@ function AddItem({ match, history }) {
 						as='textarea'
 						rows='3'
 						name='value'
-				
 						onChange={handleChange}
 					/>
 				</Form.Group>
@@ -83,6 +81,17 @@ function AddItem({ match, history }) {
 						onChange={handleChange}
 					/>
 				</Form.Group>
+				<ul className='categoryList categoryListTitle'>
+					Category Options
+					<li className='listItem'>Adventuring Gear</li>
+					<li className='listItem'>Weapons</li>
+					<li className='listItem'>Food and Drink</li>
+					<li className='listItem'>Armor and Shield</li>
+					<li className='listItem'>Alchemical Items</li>
+					<li className='listItem'>Clothing</li>
+					<li className='listItem'>Containers</li>
+					<li className='listItem'>Books, Paper, and Writing Supplies</li>
+				</ul>
 				<button type='submit'>Add Item</button>
 			</Form>
 		</div>

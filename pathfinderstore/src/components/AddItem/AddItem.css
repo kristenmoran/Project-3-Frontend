@@ -1,0 +1,22 @@
+.testing {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 80px;
+	overflow-y: auto;
+}
+
+.categoryList {
+	list-style-type: none;
+}
+
+.categoryListTitle {
+	font-style: italic;
+	font-size: 25px;
+}
+
+.listItem {
+	font-style: normal;
+	font-size: 20px;
+}
