@@ -14,7 +14,7 @@ import Homepage from './components/Homepage/Homepage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import './App.css';
-import CRUD from './components/CRUD/CRUD';
+import EditItem from './components/EditItem/EditItem';
 
 function App() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
@@ -38,7 +38,7 @@ function App() {
 			<Header />
 			<Switch>
 				<Route path={`/`} exact={true} component={Homepage} />
-				<Route path={`/edit`} exact={true} component={CRUD} />
+				<Route path={`/edit/:id`} exact={true} component={EditItem} />
 				<Route
 					path={`/adventuring`}
 					exact={true}
@@ -71,7 +71,7 @@ function App() {
 					path={'/:id'}
 					exact={true}
 					render={(props) => (
-						<ItemPage match={props.match} categories={categories} />
+						<ItemPage match={props.match} location={props.location} history={props.history} categories={categories} />
 					)}
 				/>
 			</Switch>
