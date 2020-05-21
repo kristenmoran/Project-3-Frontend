@@ -16,7 +16,8 @@ import Footer from './components/Footer/Footer';
 import SearchResults from './components/SearchResults/SearchResults';
 import './App.css';
 
-function App() {
+function App(props) {
+	console.log(props);
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [categories, setItems] = useState([]);
 
@@ -34,7 +35,7 @@ function App() {
 	}
 
 	return (
-		<div className='App'>
+		<div className={props.location.pathname === '/' ? 'App bg' : 'App'}>
 			<Header />
 			<Switch>
 				<Route path={`/`} exact={true} component={Homepage} />

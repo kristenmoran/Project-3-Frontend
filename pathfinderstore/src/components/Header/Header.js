@@ -17,7 +17,10 @@ class Header extends Component {
 						</Link>
 					</Navbar.Brand>
 					<h1>Pathfinder Store</h1>
-					<DropdownButton id='dropdown-basic-button' title='Categories'>
+					<DropdownButton
+						alignRight
+						id='dropdown-basic-button'
+						title='Categories'>
 						<Dropdown.Item>
 							<Link to='/adventuring'>Adventuring Gear</Link>
 						</Dropdown.Item>

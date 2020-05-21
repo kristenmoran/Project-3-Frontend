@@ -10,13 +10,21 @@
 	color: black;
 }
 
-.homepage {
+/* .homepage {
 	background-image: url('../../images/WoodImg.jpeg');
 	height: 90vh;
 	background-repeat: no-repeat;
 	background-size: cover;
+} */
+
+.card {
+	margin: 0 0.75rem;
 }
 
-.carousel-cards {
-	width: 18rem;
+.card-title {
+	min-height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
