@@ -20,7 +20,7 @@ function AdventuringCategory() {
 			.catch(console.error);
 	}, [url]);
 
-	
+
 
 	if (categories.length === 0) {
 		return <div className='searching'>Gathering Items</div>;
@@ -31,6 +31,7 @@ function AdventuringCategory() {
 			<Header />
 			<h2 className='categoryTitle'>Adventuring Items</h2>
 			<h3 className='titleDescription'>Select an item Adventurer!</h3>
+			<Link to={`/new`}>Add an Item</Link>
 			<Container className='container-fluid d-flex justify-content-center'>
 				<Row>
 					{categories &&

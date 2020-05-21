@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
@@ -13,30 +12,20 @@ class Header extends Component {
 						<h1>Pathfinder Store</h1>
 					</Link>
 					<DropdownButton id='dropdown-basic-button' title='Categories'>
-						<Dropdown.Item>
-							<Link to='/adventuring'>Adventuring Gear</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/food_drink'>Food and Drink</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/armor_shield'>Armor and Shield</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/weapons'>Weapons</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/alchemical'>Alchemical Items</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/clothing'>Clothing</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/containers'>Containers</Link>
-						</Dropdown.Item>
-						<Dropdown.Item>
-							<Link to='/writing'>Books, Paper and Writing Supplies</Link>
-						</Dropdown.Item>
+							<Link to='/adventuring' className='dropdown-item'>Adventuring Gear</Link>
+							<Link className='dropdown-item' to='/food_drink'>Food and Drink</Link>
+					
+							<Link className='dropdown-item' to='/armor_shield'>Armor and Shield</Link>
+					
+							<Link className='dropdown-item' to='/weapons'>Weapons</Link>
+					
+							<Link className='dropdown-item' to='/alchemical'>Alchemical Items</Link>
+					
+							<Link className='dropdown-item' to='/clothing'>Clothing</Link>
+					
+							<Link className='dropdown-item' to='/containers'>Containers</Link>
+					
+							<Link className='dropdown-item' to='/writing'>Books, Paper and Writing Supplies</Link>
 					</DropdownButton>
 				</nav>
 			</header>

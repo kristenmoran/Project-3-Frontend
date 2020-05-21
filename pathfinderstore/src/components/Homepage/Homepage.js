@@ -51,7 +51,6 @@ function Homepage() {
 					About this App
 				</Button>
 				<MyModal show={modalShow} onHide={() => setModalShow(false)} />
-				<Link className='edit-button' to='/edit'>Edit</Link>
 				<Carousel
 					additionalTransfrom={0}
 					arrows
