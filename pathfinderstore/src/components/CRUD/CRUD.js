@@ -1,38 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
+import axios from 'axios';
 import './CRUD.css';
 
 function CRUD() {
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [editItem, setEditItem] = useState([]);
-	const [setString] = useState([]);
+	const [createItem, setCreateItem] = useState([]);
+	const [deleteItem, setDeleteItem] = useState([]);
+	const [name, setName] = useState([]);
+	const [category, setCategory] = useState([]);
+	const [description, setDescription] = useState([]);
 
 	useEffect(() => {
-		fetch(url)
-			.then((response) => response.json())
-			.then((response) => {
-				setEditItem(response);
-			})
-			.catch(console.error);
+		axios.get(url).then((response) => {
+			//gets the initial data
+			setCreateItem(response.data);
+		});
 	}, [url]);
 
-	function handleChange(event) {
-		setString(event.target.value);
-	}
+	// axios.put(`${url}/admin/:id`, {
+	//     name,
+	//     category,
+	//     description
+	// }).then((response) => {
+	//     // console.log(response)
+	//     setCreateItem(response.data)
+	// })
 
-	function createItem(item) {
-		return fetch(url, {
-			method: 'POST',
-			body: JSON.stringify(item),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		})
-			.then((res) => {
-				return res;
-			})
-			.catch((err) => err);
-	}
+	// function updateButton(item) {
+	// 	console.log('clicked');
+    // }
+    
+    // axios.post(`${url}`, {
+    //     name,
+    //     category,
+    //     description
+    // }).then((response) => {
+    //     setCreateItem(response.data)
+    // })
+
+    // axios.delete(`${url}`).then((response) => {
+    //     setCreateItem(response.data)
+    // })
 
 	return (
 		<div className='testing'>
@@ -40,18 +50,32 @@ function CRUD() {
 			<Form>
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Label>Name</Form.Label>
-					<Form.Control type='text' placeholder='ex. Bag of Holding' />
+					<Form.Control
+						type='text'
+						placeholder='ex. Bag of Holding'
+						onChange={(e) => setName(e.target.value)}
+					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Label>Category</Form.Label>
-					<Form.Control type='text' placeholder='ex. Adventuring' />
+					<Form.Control
+						type='text'
+						placeholder='ex. Adventuring'
+						onChange={(e) => setCategory(e.target.value)}
+					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlTextarea1'>
 					<Form.Label>Item Description</Form.Label>
-					<Form.Control as='textarea' rows='3' />
+					<Form.Control
+						as='textarea'
+						rows='3'
+						onChange={(e) => setDescription(e.target.value)}
+					/>
 				</Form.Group>
 			</Form>
-			<button type='submit'>Add Item</button>
+			<button type='submit' onClick={setCreateItem}>
+				Add Item
+			</button>
 			<button type='submit'>Update Item</button>
 			<button type='submit'>Delete Item</button>
 		</div>
