@@ -13,6 +13,7 @@ import ItemPage from './components/ItemPages/ItemPage';
 import Homepage from './components/Homepage/Homepage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import SearchResults from './components/SearchResults/SearchResults';
 import './App.css';
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
 					component={ContainersCategory}
 				/>
 				<Route path={`/writing`} exact={true} component={WritingCategory} />
+				<Route path={`/search`} exact={true} component={SearchResults} />
 				<Route
 					path={'/:id'}
 					exact={true}

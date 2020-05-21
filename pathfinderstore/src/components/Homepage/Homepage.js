@@ -15,6 +15,7 @@ import Potion from '../../images/potion.png';
 import Clothing from '../../images/tunic.png';
 import Pouch from '../../images/pouch.png';
 import Food from '../../images/turkeyleg.png';
+import Search from '../../images/search.png';
 
 function MyModal(props) {
 	return (
@@ -97,6 +98,12 @@ function Homepage() {
 					sliderClass=''
 					slidesToSlide={1}
 					swipeable>
+					<Card className='carousel-cards'>
+						<Link to='/search' className='item btn stretched-link'>
+							<Card.Img variant='top' src={Search} />
+							<Card.Title>Search</Card.Title>
+						</Link>
+					</Card>
 					<Card className='carousel-cards'>
 						<Link to='/adventuring' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Tent} />
