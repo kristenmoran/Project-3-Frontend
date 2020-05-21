@@ -30,7 +30,11 @@ function MyModal(props) {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<p>I am not sure what exactly to put in here I'm just glad it works!</p>
+				<p>
+					This is a store for Pathfinder. Pathfinder is a fantasy tabletop role
+					playing game. Search our inventory to see information about items for
+					your characters
+				</p>
 			</Modal.Body>
 			<Modal.Footer>
 				<Button onClick={props.onHide}>Close</Button>
@@ -51,7 +55,9 @@ function Homepage() {
 					onClick={() => setModalShow(true)}>
 					About this App
 				</Button>
-				<Link to={`/new`}>Add an Item</Link>
+				<Link className='add-button' to={`/new`}>
+					Add an Item
+				</Link>
 				<MyModal show={modalShow} onHide={() => setModalShow(false)} />
 				<Carousel
 					additionalTransfrom={0}
