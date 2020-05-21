@@ -13,11 +13,13 @@ import ItemPage from './components/ItemPages/ItemPage';
 import Homepage from './components/Homepage/Homepage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import SearchResults from './components/SearchResults/SearchResults';
 import './App.css';
 import EditItem from './components/EditItem/EditItem';
 import AddItem from './components/AddItem/AddItem'
 
-function App() {
+function App(props) {
+	console.log(props);
 	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
 	const [categories, setItems] = useState([]);
 
@@ -35,7 +37,7 @@ function App() {
 	}
 
 	return (
-		<div className='App'>
+		<div className={props.location.pathname === '/' ? 'App bg' : 'App'}>
 			<Header />
 			<Switch>
 				<Route path={`/`} exact={true} component={Homepage} />
@@ -69,6 +71,7 @@ function App() {
 					component={ContainersCategory}
 				/>
 				<Route path={`/writing`} exact={true} component={WritingCategory} />
+				<Route path={`/search`} exact={true} component={SearchResults} />
 				<Route
 					path={'/:id'}
 					exact={true}

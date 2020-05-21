@@ -7,14 +7,15 @@ import Card from 'react-bootstrap/Card';
 import './Homepage.css';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-import Book from '../../images/book.png';
-import Tent from '../../images/tent.png';
-import Sword from '../../images/pixartsword.png';
-import Armor from '../../images/breastplatearmor.jpg';
-import Potion from '../../images/potion.png';
-import Clothing from '../../images/tunic.png';
-import Pouch from '../../images/pouch.png';
-import Food from '../../images/turkeyleg.png';
+import Book from '../../images/P3Book.png';
+import Tent from '../../images/P3Tent.png';
+import Sword from '../../images/P3Sword.png';
+import Armor from '../../images/P3Armor.png';
+import Potion from '../../images/P3Potion.png';
+import Clothing from '../../images/P3Tunic.png';
+import Pouch from '../../images/P3Pouch.png';
+import Food from '../../images/P3Turkey.png';
+import Search from '../../images/P3Search.png';
 
 function MyModal(props) {
 	return (
@@ -98,6 +99,12 @@ function Homepage() {
 					sliderClass=''
 					slidesToSlide={1}
 					swipeable>
+					<Card className='carousel-cards'>
+						<Link to='/search' className='item btn stretched-link'>
+							<Card.Img variant='top' src={Search} />
+							<Card.Title>Search</Card.Title>
+						</Link>
+					</Card>
 					<Card className='carousel-cards'>
 						<Link to='/adventuring' className='item btn stretched-link'>
 							<Card.Img variant='top' src={Tent} />
