@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import './ContainersCategory.css';
 
 function ContainerCategory() {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/continers`;
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/containers`;
 	const [categories, setItems] = useState([]);
 
 	useEffect(() => {

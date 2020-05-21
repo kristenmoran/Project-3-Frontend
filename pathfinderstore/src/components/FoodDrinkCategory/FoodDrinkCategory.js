@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import './FoodDrinkCategory.css';
 
 function AdventuringCategory() {
-	const url = `https://pathfinder-inventory.herokuapp.com/shop/items`;
+	const url = `https://pathfinder-inventory.herokuapp.com/shop/items/food_drink`;
 	const [categories, setItems] = useState([]);
 
 	useEffect(() => {
