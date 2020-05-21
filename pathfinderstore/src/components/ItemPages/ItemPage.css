@@ -43,7 +43,8 @@
 	font-size: 25px;
 }
 
-.edit-button:hover {
+.edit-button:hover,
+.delete-button:hover {
 	background-color: #301014;
 	color: #a2a392;
 	border-color: #301014;

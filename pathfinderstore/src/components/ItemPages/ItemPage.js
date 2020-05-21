@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import './ItemPage.css';
 
 function ItemPage({ match, location, history }) {
-	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/';
+	const url = 'https://pathfinder-inventory.herokuapp.com/shop/items/id';
 	const [item, setItem] = useState({});
 
 	useEffect(() => {
