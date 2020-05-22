@@ -1,68 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pathfinder Store
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This is a store for Pathfinder. Pathfinder is a fantasy tabletop role playing game. Search our inventory to see information about items for your characters.
 
-### `yarn start`
+This project was for General Assembly's Software Engineering Immersive.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Project Planning](src/images/projectplanning.png)
+[Trello Board](https://trello.com/b/Qa4HgioB/ga-project-3)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Repo Links:
+[Backend Repo](https://github.com/kristenmoran/Project-3-Backend)
+[Frontend Repo](https://github.com/kristenmoran/Project-3-Frontend)
 
-### `yarn test`
+Team Members:
+Justin
+Sean
+Bijal
+Kristen
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The final result can be viewed here: [Pathfinder](https://pathfinder-store.herokuapp.com/)
 
-### `yarn build`
+## From the Database
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Homepage
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Homepage](src/images/homepage.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Category Page
 
-### `yarn eject`
+![Category Page](src/images/categorypage.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Item Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Item Page](src/images/itempage.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Edit Page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Edit Item](src/images/edititempage.png)
 
-## Learn More
+### Add Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Add Item](src/images/additempage.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features/User Stories
 
-### Code Splitting
+## User Stories
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- _As a user, I want to see a listing of all items in the Pathfinder store_
+- _As a user, I want to click on a specific category of items and see all the items in that category_
+- _As a user, I want to click on a specific item and see the description and stats on the item_
 
-### Analyzing the Bundle Size
+_**Post Stretch Goal**_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Silver
 
-### Making a Progressive Web App
+- _As a user, I want to be able to authorize and authenticate their profile_
+- _As a user, I want to assign items to a user_
+- _As a user, I want to search for a specific item_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Gold
 
-### Advanced Configuration
+- _As a user, I want to add reference IDs for a GM and player to the items_
+- _As a user, I want a GM to pull up their information for a campaign_
+- _As a user, I want to add pictures to the items_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Issues/Hurdles
 
-### Deployment
+When the homepage loads it's not response.
+When your search results in two items the items overlap.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Technologies and Frameworks Used
 
-### `yarn build` fails to minify
+- HTML5, CSS, JavaScript, React, React Hooks, React Router, Bootstrap, MongoDB, Mongoose, Node.js, Nodemon, React-multi-carousel
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Installation
+
+```
+Install Pathfinder Store:
+1. Fork & clone the repository
+2. Add/enhance features and technologies!
+3. Submit any issues
+```
+
+## Contribute
+
+This is a group project presented for evaluation for General Assembly and is not open for outside contributions at this time. However, if you have feature suggestions to improve the usability or functionality of the application, feel free to create an Issue on this GitHub repository.
+
+[Issue Tracker Frontend](https://github.com/kristenmoran/Project-3-Frontend/issues)
+[Issue Tracker Backend](https://github.com/kristenmoran/Project-3-Backend/issues)
