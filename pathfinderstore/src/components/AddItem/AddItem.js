@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import Header from '../Header/Header';
 import './AddItem.css';
 
 function AddItem({ match, history }) {
@@ -34,6 +35,7 @@ function AddItem({ match, history }) {
 
 	return (
 		<div className='testing'>
+			<Header />
 			<h1 className='addTitle'>Add An Item</h1>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group controlId='exampleForm.ControlInput1'>
